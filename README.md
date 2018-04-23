@@ -35,6 +35,5 @@ public class BlankOperationClipboardDemo : MonoBehaviour
  <activity android:name="com.alianhome.clipboardoperation.MainActivity"/> 
  ```
 
-* Email: wangfj11@foxmail.com
-* by Blank
-* by `http://blankOperationClipboard.alianhome.com` (waiting...)
+* Email: wangfj11@foxmail.com Blank
+* by <http://blankOperationClipboard.alianhome.com> (waiting...)
