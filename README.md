@@ -37,4 +37,4 @@ public class BlankOperationClipboardDemo : MonoBehaviour
 
 * Email: wangfj11@foxmail.com
 * by Blank
-* by blankOperationClipboard.alianhome.com (waiting...)
+* by `http://blankOperationClipboard.alianhome.com` (waiting...)
