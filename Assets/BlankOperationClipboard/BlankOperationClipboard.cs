@@ -26,30 +26,21 @@
 //  * 
 //  * 说明：
 //  *       用于Android 和IOS 平台的粘贴板的读写访问
-//  *       文件列表：
-//  *              Android:
-//  *               BlankOperationClipboard.jar 文件一个
-//  *              IOS:
-//  *               BlankOperationClipboard.h 文件一个
-//  *               BlankOperationClipboard.mm 文件一个
 //  * 文件名：BlankOperationClipboard.cs
 //  * 创建时间：2016年07月14日 
 //  * 创建人：Blank Alian
 //  */
 using UnityEngine;
 
-/// <summary>
-/// Android
-/// 需要在清单文件中添加的Activity
-///     <activity android:name="com.alianhome.clipboardoperation.MainActivity"/> 
-/// </summary>
 
 #if UNITY_IOS
 using System.Runtime.InteropServices;
 #endif
 
-
-public class BlankOperationClipboard : MonoBehaviour
+/// <summary>
+/// 粘贴板的读写
+/// </summary>
+public sealed class BlankOperationClipboard
 {
 
 #if UNITY_IOS
@@ -68,10 +59,10 @@ public class BlankOperationClipboard : MonoBehaviour
     /// <returns></returns>
     public static string GetValue()
     {
-#if UNITY_EDITOR
-        return null;
+#if UNITY_EDITOR || UNITY_STANDALONE
+        return string.Empty;
 #elif UNITY_ANDROID
-        using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.clipboardoperation.MainActivity"))
+        using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.operationclipboard.MainActivity"))
         {
             return androidJavaClass.CallStatic<string>("GetClipBoard");
         }
@@ -86,10 +77,13 @@ public class BlankOperationClipboard : MonoBehaviour
     /// <param name="text"></param>
     public static void SetValue(string text)
     {
-#if UNITY_EDITOR
-
+#if UNITY_EDITOR || UNITY_STANDALONE
+        TextEditor textEditor = new TextEditor();
+        textEditor.text = text;
+        textEditor.OnFocus();
+        textEditor.Copy();
 #elif UNITY_ANDROID
-        using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.clipboardoperation.MainActivity"))
+        using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.operationclipboard.MainActivity"))
         {
              androidJavaClass.CallStatic("SetClipBoard", text);
         }
