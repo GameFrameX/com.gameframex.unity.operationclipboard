@@ -1,6 +1,11 @@
 # BlankOperationClipboard
+    Unity 读写Android 和 iOS 的粘贴板插件
 
-DEMO
+# Docs
+
+> [文档说明在这里](https://blog.alianhome.com/BlankOperationClipboard)
+
+# DEMO
 
 ```csharp
 
@@ -26,14 +31,3 @@ public class BlankOperationClipboardDemo : MonoBehaviour
 }
 
 ```
-
-#  Important Tips (Android)
-##  需要添加下面的Activity：
-
-```xml
-
- <activity android:name="com.alianhome.clipboardoperation.MainActivity"/> 
- ```
-
-* Email: wangfj11@foxmail.com Blank
-* by <http://blankOperationClipboard.alianhome.com> (waiting...)
