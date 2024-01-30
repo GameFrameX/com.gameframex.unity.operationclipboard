@@ -30,6 +30,7 @@
 //  * 创建时间：2016年07月14日 
 //  * 创建人：Blank Alian
 //  */
+
 using UnityEngine;
 
 
@@ -42,7 +43,6 @@ using System.Runtime.InteropServices;
 /// </summary>
 public sealed class BlankOperationClipboard
 {
-
 #if UNITY_IOS
 	[DllImport("__Internal")]
 	private static extern string GetClipBoard ();
@@ -59,18 +59,18 @@ public sealed class BlankOperationClipboard
     /// <returns></returns>
     public static string GetValue()
     {
-#if UNITY_EDITOR || UNITY_STANDALONE
-        return string.Empty;
-#elif UNITY_ANDROID
+#if UNITY_ANDROID
         using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.operationclipboard.MainActivity"))
         {
             return androidJavaClass.CallStatic<string>("GetClipBoard");
         }
 #elif UNITY_IOS
 	    return GetClipBoard ();
+#else
+        return UnityEngine.GUIUtility.systemCopyBuffer ?? string.Empty;
 #endif
-
     }
+
     /// <summary>
     /// 设置粘贴板的值
     /// </summary>
@@ -89,6 +89,8 @@ public sealed class BlankOperationClipboard
         }
 #elif UNITY_IOS
 		SetClipBoard (text);
+#else
+        UnityEngine.GUIUtility.systemCopyBuffer = text;
 #endif
     }
 }
