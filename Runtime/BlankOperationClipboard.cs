@@ -1,39 +1,4 @@
-﻿// /**
-//  *　　　　　　　　┏┓　　　┏┓+ +
-//  *　　　　　　　┏┛┻━━━┛┻┓ + +
-//  *　　　　　　　┃　　　　　　　┃ 　
-//  *　　　　　　　┃　　　━　　　┃ ++ + + +
-//  *　　　　　　 ████━████ ┃+
-//  *　　　　　　　┃　　　　　　　┃ +
-//  *　　　　　　　┃　　　┻　　　┃
-//  *　　　　　　　┃　　　　　　　┃ + +
-//  *　　　　　　　┗━┓　　　┏━┛
-//  *　　　　　　　　　┃　　　┃　　　　　　　　　　　
-//  *　　　　　　　　　┃　　　┃ + + + +
-//  *　　　　　　　　　┃　　　┃　　　　Code is far away from bug with the animal protecting　　　　　　　
-//  *　　　　　　　　　┃　　　┃ + 　　　　神兽保佑,代码无bug　　
-//  *　　　　　　　　　┃　　　┃
-//  *　　　　　　　　　┃　　　┃　　+　　　　　　　　　
-//  *　　　　　　　　　┃　 　　┗━━━┓ + +
-//  *　　　　　　　　　┃ 　　　　　　　┣┓
-//  *　　　　　　　　　┃ 　　　　　　　┏┛
-//  *　　　　　　　　　┗┓┓┏━┳┓┏┛ + + + +
-//  *　　　　　　　　　　┃┫┫　┃┫┫
-//  *　　　　　　　　　　┗┻┛　┗┻┛+ + + +
-//  *
-//  *
-//  * ━━━━━━感觉萌萌哒━━━━━━
-//  * 
-//  * 说明：
-//  *       用于Android 和IOS 平台的粘贴板的读写访问
-//  * 文件名：BlankOperationClipboard.cs
-//  * 创建时间：2016年07月14日 
-//  * 创建人：Blank Alian
-//  */
-
-using UnityEngine;
-
-
+﻿using UnityEngine;
 #if UNITY_IOS
 using System.Runtime.InteropServices;
 #endif
@@ -41,7 +6,7 @@ using System.Runtime.InteropServices;
 /// <summary>
 /// 粘贴板的读写
 /// </summary>
-public sealed class BlankOperationClipboard
+public static class BlankOperationClipboard
 {
 #if UNITY_IOS
 	[DllImport("__Internal")]
@@ -49,7 +14,6 @@ public sealed class BlankOperationClipboard
 	
 	[DllImport("__Internal")]
 	private static extern void SetClipBoard (string text);
-
 #endif
 
 
