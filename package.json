@@ -1,12 +1,12 @@
 {
-  "name": "com.alianblank.blankoperationclipboard",
+  "name": "com.alianblank.gameframex.unity.blankoperationclipboard",
   "displayName": "Blank Operation Clipboard",
   "version": "1.0.1",
   "unity": "2019.4",
   "description": "操作粘贴板",
   "author": {
     "name": "alianblank",
-    "url": "https://github.com/AlianBlank/BlankOperationClipboard"
+    "url": "https://github.com/AlianBlank/com.alianblank.gameframex.unity.blankoperationclipboard"
   },
   "samples": [
     {
@@ -17,8 +17,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlianBlank/BlankOperationClipboard.git"
-  },
-  "relatedPackages": {},
-  "type": "library"
+    "url": "https://github.com/AlianBlank/com.alianblank.gameframex.unity.blankoperationclipboard.git"
+  }
 }
