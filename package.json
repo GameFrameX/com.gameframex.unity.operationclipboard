@@ -5,8 +5,9 @@
   "unity": "2019.4",
   "description": "操作粘贴板",
   "author": {
-    "name": "alianblank",
-    "url": "https://github.com/AlianBlank/com.alianblank.gameframex.unity.blankoperationclipboard"
+    "name": "Blank",
+    "email": "alianblank@outlook.com",
+    "url": "https://github.com/AlianBlank/"
   },
   "samples": [
     {
