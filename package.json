@@ -1,7 +1,7 @@
 {
   "name": "com.gameframex.unity.operationclipboard",
   "displayName": "Game Frame X Operation Clipboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "unity": "2019.4",
   "description": "操作粘贴板",
   "author": {
