@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.0.3...1.1.0) (2025-12-23)
+
+
+### Features
+
+* **ci:** change ci ([4579e60](https://github.com/gameframex/com.gameframex.unity.operationclipboard/commit/4579e601557c5557f6ada95c8fae429505cb7b53))
+
 # Changelog
 
 ## [1.0.3](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/tree/1.0.3) (2025-06-01)
