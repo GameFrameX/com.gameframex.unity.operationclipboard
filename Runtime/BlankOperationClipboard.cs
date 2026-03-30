@@ -37,8 +37,8 @@ public static class BlankOperationClipboard
         var content = textEditor.text;
         return content;
 #elif UNITY_WEBGL
+        var content = string.Empty;
 #if ENABLE_DOUYIN_MINI_GAME
-        string content = string.Empty;
         TTSDK.TT.GetClipboardData((b, text) =>
         {
             if (b)
@@ -46,15 +46,23 @@ public static class BlankOperationClipboard
                 content = text;
             }
         });
-        return content;
 #endif
+#if ENABLE_WECHAT_MINI_GAME
+        var clipboardDataOption = new WeChatWASM.GetClipboardDataOption
+        {
+            success = option => { content = option.data; },
+        };
+        WeChatWASM.WX.GetClipboardData(clipboardDataOption);
+#endif
+        return content;
 #elif UNITY_ANDROID
         using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.operationclipboard.MainActivity"))
         {
             return androidJavaClass.CallStatic<string>("GetClipBoard");
         }
+
 #elif UNITY_IOS
-	    return GetClipBoard ();
+        return GetClipBoard();
 #else
         return UnityEngine.GUIUtility.systemCopyBuffer ?? string.Empty;
 #endif
@@ -78,13 +86,20 @@ public static class BlankOperationClipboard
 #if ENABLE_DOUYIN_MINI_GAME
         TTSDK.TT.SetClipboardData(text);
 #endif
+#if ENABLE_WECHAT_MINI_GAME
+        WeChatWASM.WX.SetClipboardData(new WeChatWASM.SetClipboardDataOption
+        {
+            data = text,
+        });
+#endif
 #elif UNITY_ANDROID
         using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.operationclipboard.MainActivity"))
         {
-             androidJavaClass.CallStatic("SetClipBoard", text);
+            androidJavaClass.CallStatic("SetClipBoard", text);
         }
+
 #elif UNITY_IOS
-		SetClipBoard (text);
+        SetClipBoard(text);
 #else
         UnityEngine.GUIUtility.systemCopyBuffer = text;
 #endif
