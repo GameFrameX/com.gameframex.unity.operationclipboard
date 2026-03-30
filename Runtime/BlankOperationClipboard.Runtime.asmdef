@@ -1,3 +1,16 @@
 {
-	"name": "BlankOperationClipboard.Runtime"
+    "name": "BlankOperationClipboard.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "Wx"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
