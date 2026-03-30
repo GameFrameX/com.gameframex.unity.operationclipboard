@@ -23,7 +23,25 @@ public static class BlankOperationClipboard
     /// <returns></returns>
     public static string GetValue()
     {
-#if UNITY_ANDROID
+#if UNITY_EDITOR || UNITY_STANDALONE
+        TextEditor textEditor = new TextEditor();
+        textEditor.OnFocus();
+        textEditor.Paste();
+        var content = textEditor.text;
+        return content;
+#elif UNITY_WEBGL
+#if ENABLE_DOUYIN_MINI_GAME
+        string content = string.Empty;
+        TTSDK.TT.GetClipboardData((b, text) =>
+        {
+            if (b)
+            {
+                content = text;
+            }
+        });
+        return content;
+#endif
+#elif UNITY_ANDROID
         using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.operationclipboard.MainActivity"))
         {
             return androidJavaClass.CallStatic<string>("GetClipBoard");
@@ -46,6 +64,10 @@ public static class BlankOperationClipboard
         textEditor.text = text;
         textEditor.OnFocus();
         textEditor.Copy();
+#elif UNITY_WEBGL
+#if ENABLE_DOUYIN_MINI_GAME
+        TTSDK.TT.SetClipboardData(text);
+#endif
 #elif UNITY_ANDROID
         using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.alianhome.operationclipboard.MainActivity"))
         {
