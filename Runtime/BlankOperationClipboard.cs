@@ -4,8 +4,12 @@ using System.Runtime.InteropServices;
 #endif
 
 /// <summary>
-/// 粘贴板的读写
+/// 粘贴板的读写操作工具类。
 /// </summary>
+/// <remarks>
+/// Provides clipboard read and write operations across different platforms.
+/// Supports Editor, Standalone, WebGL (Douyin Mini Game), Android, and iOS platforms.
+/// </remarks>
 public static class BlankOperationClipboard
 {
 #if UNITY_IOS
@@ -18,9 +22,12 @@ public static class BlankOperationClipboard
 
 
     /// <summary>
-    /// 获取粘贴板的值
+    /// 获取粘贴板的值。
     /// </summary>
-    /// <returns></returns>
+    /// <remarks>
+    /// Gets the current value from the system clipboard.
+    /// </remarks>
+    /// <returns>粘贴板中的文本内容；如果为空则返回空字符串 / The text content from clipboard; returns empty string if empty</returns>
     public static string GetValue()
     {
 #if UNITY_EDITOR || UNITY_STANDALONE
@@ -54,9 +61,12 @@ public static class BlankOperationClipboard
     }
 
     /// <summary>
-    /// 设置粘贴板的值
+    /// 设置粘贴板的值。
     /// </summary>
-    /// <param name="text"></param>
+    /// <remarks>
+    /// Sets the specified text to the system clipboard.
+    /// </remarks>
+    /// <param name="text">要设置到粘贴板的文本内容 / Text content to set to clipboard</param>
     public static void SetValue(string text)
     {
 #if UNITY_EDITOR || UNITY_STANDALONE
