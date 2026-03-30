@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.1.0...1.2.0) (2026-03-30)
+
+
+### Bug Fixes
+
+* 为WebGL平台添加剪贴板支持 ([d75f462](https://github.com/gameframex/com.gameframex.unity.operationclipboard/commit/d75f4625a88c44f437c1191f2bd4542b11bd886c))
+
+
+### Features
+
+* **剪贴板:** 增加微信小游戏平台的剪贴板支持 ([188364a](https://github.com/gameframex/com.gameframex.unity.operationclipboard/commit/188364ab2493aed6c3a79121e083fccc75370495))
+
 # [1.1.0](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.0.3...1.1.0) (2025-12-23)
 
 
