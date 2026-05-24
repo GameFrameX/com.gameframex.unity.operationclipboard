@@ -17,36 +17,36 @@
 </p>
 
 <p align="center">
-  All-in-One Solution for Indie Game Development · Empowering Indie Developers' Dreams
+  独立游戏前后端一体化解决方案 · 独立游戏开发者的圆梦大使
 </p>
 
 <p align="center">
-  <a href="https://gameframex.doc.alianblank.com">Documentation</a> ·
-  <a href="#quick-start">Quick Start</a> ·
-  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6">QQ Group</a> ·
-  Language: <strong>English</strong> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.zh-TW.md">繁體中文</a> | <a href="README.ja.md">日本語</a> | <a href="README.ko.md">한국어</a>
+  <a href="https://gameframex.doc.alianblank.com">文档</a> ·
+  <a href="#快速开始">快速开始</a> ·
+  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6">QQ群</a> ·
+  语言: <a href="README.md">English</a> | <strong>简体中文</strong> | <a href="README.zh-TW.md">繁體中文</a> | <a href="README.ja.md">日本語</a> | <a href="README.ko.md">한국어</a>
 </p>
 
 ---
 
-## Project Overview
+## 项目简介
 
-**Operation Clipboard** - A Unity plugin for reading and writing the clipboard on Android and iOS platforms. Includes `link.xml` for IL2CPP stripping prevention.
+**Operation Clipboard 操作粘贴板** - Unity 读写 Android 和 iOS 粘贴板的插件。包含 `link.xml` 用于防止 IL2CPP 裁剪。
 
-## Quick Start
+## 快速开始
 
-### Installation
+### 安装方式
 
-Choose one of the following methods:
+任选其一：
 
-1. Add the following to the `dependencies` section of your project's `manifest.json`:
+1. 直接在 `manifest.json` 文件中添加以下内容
    ```json
    {"com.gameframex.unity.operationclipboard": "https://github.com/AlianBlank/com.gameframex.unity.operationclipboard.git"}
    ```
-2. Use `Git URL` in Unity's Package Manager: https://github.com/AlianBlank/com.gameframex.unity.operationclipboard.git
-3. Download the repository and place it in your Unity project's `Packages` directory.
+2. 在 Unity 的 `Packages Manager` 中使用 `Git URL` 的方式添加库，地址为：https://github.com/AlianBlank/com.gameframex.unity.operationclipboard.git
+3. 直接下载仓库放置到 Unity 项目的 `Packages` 目录下，会自动加载识别。
 
-### Usage Examples
+### 使用示例
 
 ```csharp
 using UnityEngine;
@@ -75,24 +75,24 @@ public class ClipboardDemo : MonoBehaviour
 }
 ```
 
-## Platform Support
+## 平台支持
 
-| Platform | Supported |
-|----------|-----------|
-| Windows | Yes |
-| macOS | Yes |
-| Android | Yes |
-| iOS | Yes |
+| 平台 | 支持 |
+|------|------|
+| Windows | 是 |
+| macOS | 是 |
+| Android | 是 |
+| iOS | 是 |
 
-## Documentation & Resources
+## 文档与资源
 
-- [Documentation](https://gameframex.doc.alianblank.com)
-- [GitHub Repository](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard)
+- [文档](https://gameframex.doc.alianblank.com)
+- [GitHub 仓库](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard)
 
-## Community & Support
+## 社区与支持
 
-- QQ Group: Join via [QR Code](https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6)
+- QQ群：通过 [二维码](https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6) 加入
 
-## License
+## 开源协议
 
-This project is licensed under the terms of the [LICENSE](LICENSE) file.
+本项目基于 [LICENSE](LICENSE) 文件中定义的条款授权。
