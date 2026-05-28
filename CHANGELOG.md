@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.2.0...1.2.1) (2026-05-28)
+
+
+### Bug Fixes
+
+* **ci:** 统一 .github 工作流配置 ([0d6e654](https://github.com/gameframex/com.gameframex.unity.operationclipboard/commit/0d6e6540a82eee8d5593dd1ab88b157355be9bdb))
+
 # [1.2.0](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.1.0...1.2.0) (2026-03-30)
 
 

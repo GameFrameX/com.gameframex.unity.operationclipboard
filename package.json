@@ -1,7 +1,7 @@
 {
   "name": "com.gameframex.unity.operationclipboard",
   "displayName": "Game Frame X Operation Clipboard",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "unity": "2019.4",
   "description": "GameFrameX OperationClipboard — cross-platform clipboard access package. Provides unified read/write operations for the system clipboard across platforms: Editor/Standalone (TextEditor), WebGL (Douyin/WeChat SDK), Android (JNI), iOS (P/Invoke). Docs: https://gameframex.doc.alianblank.com\n\nGameFrameX OperationClipboard — 跨平台剪贴板访问功能包。提供跨平台统一的系统剪贴板读写操作：Editor/Standalone（TextEditor）、WebGL（抖音/微信 SDK）、Android（JNI）、iOS（P/Invoke）。文档：https://gameframex.doc.alianblank.com",
   "author": {
