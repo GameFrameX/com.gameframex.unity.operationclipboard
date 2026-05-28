@@ -29,5 +29,10 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.cnb.cool/GameFrameX/npm/-/packages/"
-  }
+  },
+  "category": "GameFrameX",
+  "keywords": [
+    "GameFrameX",
+    "OperationClipboard"
+  ]
 }
