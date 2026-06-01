@@ -1,50 +1,64 @@
-<p align="center">
-  <img src="https://download.alianblank.com/gameframex/gameframex_logo_320.png" alt="GameFrameX Logo" width="160" />
-</p>
+<div align="center">
 
-<h1 align="center">Game Frame X Operation Clipboard</h1>
+<img src="https://download.alianblank.com/gameframex/gameframex_logo_320.png" alt="Game Frame X Logo" width="160" />
 
-<p align="center">
-  <a href="https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/releases">
-    <img src="https://img.shields.io/github/v/release/GameFrameX/com.gameframex.unity.operationclipboard" alt="Version" />
-  </a>
-  <a href="https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/GameFrameX/com.gameframex.unity.operationclipboard" alt="License" />
-  </a>
-  <a href="https://gameframex.doc.alianblank.com">
-    <img src="https://img.shields.io/badge/Documentation-online-blue" alt="Documentation" />
-  </a>
-</p>
+# Game Frame X Operation Clipboard
 
-<p align="center">
-  All-in-One Solution for Indie Game Development · Empowering Indie Developers' Dreams
-</p>
+[![License](https://img.shields.io/github/license/GameFrameX/com.gameframex.unity.operationclipboard)](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/blob/main/LICENSE.md)
+[![Version](https://img.shields.io/github/v/release/GameFrameX/com.gameframex.unity.operationclipboard)](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/releases)
+[![Documentation](https://img.shields.io/badge/Documentation-online-blue)](https://gameframex.doc.alianblank.com)
 
-<p align="center">
-  <a href="https://gameframex.doc.alianblank.com">Documentation</a> ·
-  <a href="#quick-start">Quick Start</a> ·
-  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6">QQ Group</a> ·
-  Language: <strong>English</strong> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.zh-TW.md">繁體中文</a> | <a href="README.ja.md">日本語</a> | <a href="README.ko.md">한국어</a>
-</p>
+> All-in-One Solution for Indie Game Development · Empowering Indie Developers' Dreams
+
+[Documentation](https://gameframex.doc.alianblank.com) · [Quick Start](#quick-start) · [QQ Group](https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6)
+
+**English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+
+</div>
 
 ---
 
 ## Project Overview
 
-**Operation Clipboard** - A Unity plugin for reading and writing the clipboard on Android and iOS platforms. Includes `link.xml` for IL2CPP stripping prevention.
+**Operation Clipboard** - A cross-platform clipboard access plugin for Unity. Provides unified read/write operations for the system clipboard across platforms:
+- **Editor/Standalone**: TextEditor API
+- **WebGL**: Douyin Mini Game SDK / WeChat Mini Game SDK
+- **Android**: JNI bridge
+- **iOS**: P/Invoke
+
+Includes `link.xml` for IL2CPP stripping prevention.
 
 ## Quick Start
 
 ### Installation
 
-Choose one of the following methods:
+Edit your Unity project's `Packages/manifest.json` and add the `scopedRegistries` section:
 
-1. Add the following to the `dependencies` section of your project's `manifest.json`:
-   ```json
-   {"com.gameframex.unity.operationclipboard": "https://github.com/AlianBlank/com.gameframex.unity.operationclipboard.git"}
-   ```
-2. Use `Git URL` in Unity's Package Manager: https://github.com/AlianBlank/com.gameframex.unity.operationclipboard.git
-3. Download the repository and place it in your Unity project's `Packages` directory.
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "GameFrameX",
+      "url": "https://gameframex.upm.alianblank.uk",
+      "scopes": [
+        "com.gameframex"
+      ]
+    }
+  ]
+}
+```
+
+Then add the package to `dependencies`:
+
+```json
+{
+  "dependencies": {
+    "com.gameframex.unity.operationclipboard": "1.2.1"
+  }
+}
+```
+
+`scopes` controls which packages are resolved through this registry. Only packages whose names start with `com.gameframex` will be fetched from it.
 
 ### Usage Examples
 
@@ -83,6 +97,8 @@ public class ClipboardDemo : MonoBehaviour
 | macOS | Yes |
 | Android | Yes |
 | iOS | Yes |
+| WebGL (Douyin Mini Game) | Yes |
+| WebGL (WeChat Mini Game) | Yes |
 
 ## Documentation & Resources
 
@@ -95,4 +111,4 @@ public class ClipboardDemo : MonoBehaviour
 
 ## License
 
-This project is licensed under the terms of the [LICENSE](LICENSE) file.
+See [LICENSE.md](LICENSE.md) for license information.

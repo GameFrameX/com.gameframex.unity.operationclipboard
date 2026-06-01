@@ -1,50 +1,64 @@
-<p align="center">
-  <img src="https://download.alianblank.com/gameframex/gameframex_logo_320.png" alt="GameFrameX Logo" width="160" />
-</p>
+<div align="center">
 
-<h1 align="center">Game Frame X Operation Clipboard</h1>
+<img src="https://download.alianblank.com/gameframex/gameframex_logo_320.png" alt="Game Frame X Logo" width="160" />
 
-<p align="center">
-  <a href="https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/releases">
-    <img src="https://img.shields.io/github/v/release/GameFrameX/com.gameframex.unity.operationclipboard" alt="Version" />
-  </a>
-  <a href="https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/GameFrameX/com.gameframex.unity.operationclipboard" alt="License" />
-  </a>
-  <a href="https://gameframex.doc.alianblank.com">
-    <img src="https://img.shields.io/badge/Documentation-online-blue" alt="Documentation" />
-  </a>
-</p>
+# Game Frame X Operation Clipboard
 
-<p align="center">
-  インディゲーム開発者向けオールインワンソリューション · インディ開発者の夢を支援
-</p>
+[![License](https://img.shields.io/github/license/GameFrameX/com.gameframex.unity.operationclipboard)](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/blob/main/LICENSE.md)
+[![Version](https://img.shields.io/github/v/release/GameFrameX/com.gameframex.unity.operationclipboard)](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/releases)
+[![Documentation](https://img.shields.io/badge/Documentation-online-blue)](https://gameframex.doc.alianblank.com)
 
-<p align="center">
-  <a href="https://gameframex.doc.alianblank.com">ドキュメント</a> ·
-  <a href="#クイックスタート">クイックスタート</a> ·
-  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6">QQグループ</a> ·
-  言語: <a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.zh-TW.md">繁體中文</a> | <strong>日本語</strong> | <a href="README.ko.md">한국어</a>
-</p>
+> インディゲーム開発者向けオールインワンソリューション · インディ開発者の夢を支援
+
+[ドキュメント](https://gameframex.doc.alianblank.com) · [クイックスタート](#クイックスタート) · [QQグループ](https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6)
+
+[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | **日本語** | [한국어](README.ko.md)
+
+</div>
 
 ---
 
 ## プロジェクト概要
 
-**Operation Clipboard** - Unity で Android と iOS のクリップボードの読み書きを行うプラグイン。IL2CPP ストリッピング防止用の `link.xml` を含みます。
+**Operation Clipboard** - Unity のクロスプラットフォームクリップボードアクセスプラグイン。以下のプラットフォームで統一されたクリップボード読み書き操作を提供します：
+- **Editor/Standalone**：TextEditor API
+- **WebGL**：Douyin Mini Game SDK / WeChat Mini Game SDK
+- **Android**：JNI ブリッジ
+- **iOS**：P/Invoke
+
+IL2CPP ストリッピング防止用の `link.xml` を含みます。
 
 ## クイックスタート
 
 ### インストール
 
-以下のいずれかの方法を選択してください：
+Unity プロジェクトの `Packages/manifest.json` を編集し、`scopedRegistries` セクションを追加してください：
 
-1. プロジェクトの `manifest.json` ファイルに以下を追加：
-   ```json
-   {"com.gameframex.unity.operationclipboard": "https://github.com/AlianBlank/com.gameframex.unity.operationclipboard.git"}
-   ```
-2. Unity の `Package Manager` で `Git URL` を使用して追加：https://github.com/AlianBlank/com.gameframex.unity.operationclipboard.git
-3. リポジトリをダウンロードして Unity プロジェクトの `Packages` ディレクトリに配置（自動的に読み込まれます）。
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "GameFrameX",
+      "url": "https://gameframex.upm.alianblank.uk",
+      "scopes": [
+        "com.gameframex"
+      ]
+    }
+  ]
+}
+```
+
+`dependencies` にパッケージを追加：
+
+```json
+{
+  "dependencies": {
+    "com.gameframex.unity.operationclipboard": "1.2.1"
+  }
+}
+```
+
+`scopes` は、どのパッケージをこのレジストリから解決するかを制御します。`com.gameframex` で始まるパッケージのみがこのレジストリから取得されます。
 
 ### 使用例
 
@@ -83,6 +97,8 @@ public class ClipboardDemo : MonoBehaviour
 | macOS | はい |
 | Android | はい |
 | iOS | はい |
+| WebGL（Douyin Mini Game） | はい |
+| WebGL（WeChat Mini Game） | はい |
 
 ## ドキュメントとリソース
 
@@ -95,4 +111,4 @@ public class ClipboardDemo : MonoBehaviour
 
 ## ライセンス
 
-このプロジェクトは [LICENSE](LICENSE) ファイルに定義された条件に基づいてライセンスされています。
+詳しくは [LICENSE.md](LICENSE.md) をご参照ください。
