@@ -21,6 +21,9 @@
     "url": "git+https://github.com/gameframex/com.gameframex.unity.operationclipboard.git",
     "name": "com.gameframex.unity.operationclipboard"
   },
+  "documentationUrl": "https://gameframex.doc.alianblank.com",
+  "changelogUrl": "https://github.com/gameframex/com.gameframex.unity.operationclipboard/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/gameframex/com.gameframex.unity.operationclipboard/blob/main/LICENSE.md",
   "devDependencies": {
     "semantic-release": "^24.2.0",
     "@semantic-release/changelog": "^6.0.3",
