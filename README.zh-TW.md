@@ -112,6 +112,17 @@ public class ClipboardDemo : MonoBehaviour
 
 - QQ群：透過 [二維碼](https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6) 加入
 
+
+## 依賴
+
+| 套件 | 說明 |
+|------|------|
+| (无) | - |
+
+
+## 更新日誌
+
+查看 [Releases](https://github.com/GameFrameX/gameframex/com.gameframex.unity.operationclipboard/releases) 了解更新日誌。
 ## 開源協議
 
 詳見 [LICENSE.md](LICENSE.md) 檔案。
