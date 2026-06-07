@@ -35,34 +35,36 @@ Includes `link.xml` for IL2CPP stripping prevention.
 
 ### Installation
 
-Edit your Unity project's `Packages/manifest.json` and add the `scopedRegistries` section:
+Choose one of the following methods:
 
-```json
-{
-  "scopedRegistries": [
-    {
-      "name": "GameFrameX",
-      "url": "https://gameframex.upm.alianblank.uk",
-      "scopes": [
-        "com.gameframex"
-      ]
-    }
-  ]
-}
-```
+1. Edit your Unity project's `Packages/manifest.json` and add the `scopedRegistries` section:
+   ```json
+   {
+     "scopedRegistries": [
+       {
+         "name": "GameFrameX",
+         "url": "https://gameframex.upm.alianblank.uk",
+         "scopes": [
+           "com.gameframex"
+         ]
+       }
+     ],
+     "dependencies": {
+       "com.gameframex.unity.operationclipboard": "1.2.1"
+     }
+   }
+   ```
 
-Then add the package to `dependencies`:
+   `scopes` controls which packages are resolved through this registry. Only packages whose names start with `com.gameframex` will be fetched from it.
 
-```json
-{
-  "dependencies": {
-    "com.gameframex.unity.operationclipboard": "1.2.1"
-  }
-}
-```
-
-`scopes` controls which packages are resolved through this registry. Only packages whose names start with `com.gameframex` will be fetched from it.
-
+2. Add to `manifest.json` dependencies:
+   ```json
+   {
+      "com.gameframex.unity.operationclipboard": "https://github.com/gameframex/com.gameframex.unity.operationclipboard.git"
+   }
+   ```
+3. Use **Package Manager** in Unity with **Git URL**: `https://github.com/gameframex/com.gameframex.unity.operationclipboard.git`
+4. Clone the repository into your Unity project's `Packages` directory. It will be loaded automatically.
 ### Usage Examples
 
 ```csharp
