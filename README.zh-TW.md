@@ -6,18 +6,19 @@
 
 [![License](https://img.shields.io/github/license/GameFrameX/com.gameframex.unity.operationclipboard)](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/blob/main/LICENSE.md)
 [![Version](https://img.shields.io/github/v/release/GameFrameX/com.gameframex.unity.operationclipboard)](https://github.com/GameFrameX/com.gameframex.unity.operationclipboard/releases)
-[![Documentation](https://img.shields.io/badge/Documentation-online-blue)](https://gameframex.doc.alianblank.com)
+[![Documentation](https://img.shields.io/badge/Documentation-docs-blue)](https://gameframex.doc.alianblank.com)
 
-> 獨立遊戲前後端一體化解決方案 · 獨立遊戲開發者的圓夢大使
+獨立遊戲前後端一體化解決方案 · 獨立遊戲開發者的圓夢大使
 
-[文檔](https://gameframex.doc.alianblank.com) · [快速開始](#快速開始) · [QQ群](https://qm.qq.com/cgi-bin/qm/qr?k=ikT9gA5m2sKwOyNOfYmQvSAPK_c3GmD6)
+<br />
+
+[文檔](https://gameframex.doc.alianblank.com) · [快速開始](#快速開始) · [QQ群](https://qm.qq.com/q/5U9Fvebw)
+
+<br />
 
 [English](README.md) | [简体中文](README.zh-CN.md) | **繁體中文** | [日本語](README.ja.md) | [한국어](README.ko.md)
 
 </div>
-
----
-
 ## 項目簡介
 
 **Operation Clipboard 操作剪貼簿** - Unity 跨平台剪貼簿訪問外掛。提供統一的系統剪貼簿讀寫操作：
