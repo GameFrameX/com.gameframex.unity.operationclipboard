@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.2.1...1.2.2) (2026-06-08)
+
+
+### Bug Fixes
+
+* 统一 LICENSE.md 为 Apache 2.0 (自有仓库) ([bc653e5](https://github.com/gameframex/com.gameframex.unity.operationclipboard/commit/bc653e50691c006cde098b85678beb8813dca846))
+
 ## [1.2.1](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.2.0...1.2.1) (2026-05-28)
 
 
