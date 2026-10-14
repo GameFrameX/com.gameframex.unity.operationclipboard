@@ -1,9 +1,9 @@
 {
   "name": "com.gameframex.unity.operationclipboard",
   "displayName": "Game Frame X Operation Clipboard",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "unity": "2019.4",
-  "description": "GameFrameX OperationClipboard — cross-platform clipboard access package. Provides unified read/write operations for the system clipboard across platforms: Editor/Standalone (TextEditor), WebGL (Douyin/WeChat SDK), Android (JNI), iOS (P/Invoke). Docs: https://gameframex.doc.alianblank.com\n\nGameFrameX OperationClipboard — 跨平台剪贴板访问功能包。提供跨平台统一的系统剪贴板读写操作：Editor/Standalone（TextEditor）、WebGL（抖音/微信 SDK）、Android（JNI）、iOS（P/Invoke）。文档：https://gameframex.doc.alianblank.com",
+  "description": "GameFrameX OperationClipboard — cross-platform clipboard access package with a channel registry. The core package provides IOperationClipboardManager (callback contract), OperationClipboardRegistry (mutual-exclusion resolution), a default implementation (systemCopyBuffer / Android JNI / iOS P-Invoke) and the static OperationClipboard facade. Mini-game adapters (WeChat / Alipay / Kuaishou / Douyin) ship as separate channel packages that self-register at startup. Docs: https://gameframex.doc.alianblank.com\n\nGameFrameX OperationClipboard —— 渠道注册表式跨平台粘贴板访问功能包。主包提供 IOperationClipboardManager（回调契约）、OperationClipboardRegistry（互斥解析注册表）、默认实现（systemCopyBuffer / Android JNI / iOS P-Invoke）与 OperationClipboard 静态门面；微信 / 支付宝 / 快手 / 抖音小游戏适配拆分为独立渠道包，安装即自注册。文档：https://gameframex.doc.alianblank.com",
   "author": {
     "name": "Blank",
     "email": "alianblank@outlook.com",

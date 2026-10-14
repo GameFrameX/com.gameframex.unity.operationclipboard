@@ -1,8 +1,8 @@
 {
-    "name": "BlankOperationClipboard.Runtime",
-    "rootNamespace": "",
+    "name": "GameFrameX.OperationClipboard.Runtime",
+    "rootNamespace": "GameFrameX.OperationClipboard.Runtime",
     "references": [
-        "Wx"
+        "GameFrameX.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
