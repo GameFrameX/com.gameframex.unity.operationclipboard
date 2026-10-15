@@ -48,6 +48,7 @@ namespace GameFrameX.OperationClipboard.Runtime
         /// <param name="channelId">渠道唯一标识</param>
         /// <param name="displayName">渠道展示名称（用于诊断输出）</param>
         /// <param name="factory">渠道管理器工厂，首次解析时调用</param>
+        [UnityEngine.Scripting.Preserve]
         public OperationClipboardChannelRegistration(string channelId, string displayName, Func<IOperationClipboardManager> factory)
         {
             if (string.IsNullOrEmpty(channelId))
@@ -63,16 +64,19 @@ namespace GameFrameX.OperationClipboard.Runtime
         /// <summary>
         /// 获取渠道唯一标识
         /// </summary>
+        [UnityEngine.Scripting.Preserve]
         public string ChannelId { get; }
 
         /// <summary>
         /// 获取渠道展示名称
         /// </summary>
+        [UnityEngine.Scripting.Preserve]
         public string DisplayName { get; }
 
         /// <summary>
         /// 获取渠道管理器工厂
         /// </summary>
+        [UnityEngine.Scripting.Preserve]
         public Func<IOperationClipboardManager> Factory { get; }
     }
 }
