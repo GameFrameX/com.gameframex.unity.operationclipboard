@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/2.0.0...2.0.1) (2026-11-10)
+
+
+### Bug Fixes
+
+* **operationclipboard:** 添加完整 link.xml 防代码裁剪保护 ([31c3fd1](https://github.com/gameframex/com.gameframex.unity.operationclipboard/commit/31c3fd126a710343ac0a78674ad8ca1843536882))
+
 # [2.0.0](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/1.2.2...2.0.0) (2026-10-15)
 
 
