@@ -56,7 +56,12 @@ namespace GameFrameX.OperationClipboard.Runtime
                     return manager;
                 }
 
-                return s_DefaultManager ??= new DefaultOperationClipboardManager();
+                if (s_DefaultManager == null)
+                {
+                    s_DefaultManager = new DefaultOperationClipboardManager();
+                }
+
+                return s_DefaultManager;
             }
         }
 
