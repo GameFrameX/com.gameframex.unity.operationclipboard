@@ -3,6 +3,9 @@
   "displayName": "Game Frame X Operation Clipboard",
   "version": "2.0.1",
   "unity": "2019.4",
+  "dependencies": {
+    "com.gameframex.unity": "3.0.0"
+  },
   "description": "GameFrameX OperationClipboard — cross-platform clipboard access package with a channel registry. Provides the IOperationClipboardManager callback contract (GetValue / SetValue), OperationClipboardRegistry with registration-order mutual-exclusion resolution, and a default implementation covering Editor / Standalone systemCopyBuffer, Android JNI and iOS P/Invoke. The static OperationClipboard facade resolves the registry first and falls back to the default when nothing is registered; WeChat / Alipay / Kuaishou / Douyin adapters ship as separate channel packages that self-register at startup. Docs: https://gameframex.doc.alianblank.com\n\nGameFrameX OperationClipboard — 渠道注册表式跨平台粘贴板功能包。主包提供 IOperationClipboardManager 回调契约（GetValue / SetValue）、按注册顺序互斥解析的 OperationClipboardRegistry，以及覆盖 Editor / Standalone systemCopyBuffer、Android JNI 与 iOS P/Invoke 的默认实现。OperationClipboard 静态门面优先解析注册渠道，无注册时回退默认实现；微信 / 支付宝 / 快手 / 抖音适配以独立渠道包形式提供，安装即自注册。文档：https://gameframex.doc.alianblank.com",
   "author": {
     "name": "Blank",
