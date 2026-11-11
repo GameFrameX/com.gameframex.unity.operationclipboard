@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/2.0.1...2.0.2) (2026-11-11)
+
+
+### Bug Fixes
+
+* **operationclipboard:** 兼容 C# 7.3 并补充创建日志 ([39b8019](https://github.com/gameframex/com.gameframex.unity.operationclipboard/commit/39b8019515a15b4292fc0785773c1d1ff7230260))
+
 ## [2.0.1](https://github.com/gameframex/com.gameframex.unity.operationclipboard/compare/2.0.0...2.0.1) (2026-11-10)
 
 
